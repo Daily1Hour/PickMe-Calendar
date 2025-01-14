@@ -33,7 +33,7 @@ public class WebConfig implements WebMvcConfigurer {
          */
 
         registry.addInterceptor(jwtInterceptor).addPathPatterns("/calendar/**") // /calendar/** 경로에 인터셉터 적용
-                .excludePathPatterns("/swagger-ui/**", "/calendar/interview"); // /swagger-ui/** 경로는 인터셉터 적용 제외
+                .excludePathPatterns("/swagger-ui/**"); // /swagger-ui/** 경로는 인터셉터 적용 제외
         /*
          * registry.addInterceptor(jwtInterceptor):
          * - JwtInterceptor를 인터셉터 체인에 추가하여 동작하게 설정.

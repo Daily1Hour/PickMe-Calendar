@@ -1,8 +1,10 @@
 package com.pickme.calendar.entity;
 
-import jakarta.persistence.*;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
@@ -23,7 +25,7 @@ public class Calendar {
     @Data
     @NoArgsConstructor
     public static class InterviewDetails{
-
+        @Indexed
         private String interviewDetailId;
 
         private Company company;
